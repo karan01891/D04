@@ -15,16 +15,18 @@
 
 def any_lowercase1(s):
     """Explain what is wrong, if anything, here.
+    Nothing wrong
     """
     for c in s:
         if c.islower():
-            return True
+            return( True)
         else:
-            return False
+            return( False)
 
 
 def any_lowercase2(s):
     """Explain what is wrong, if anything, here.
+    The 'c' is wrong , it treats the 'c' as a string and therefore will always return True
     """
     for c in s:
         if 'c'.islower():
@@ -35,6 +37,9 @@ def any_lowercase2(s):
 
 def any_lowercase3(s):
     """Explain what is wrong, if anything, here.
+    The function is wrong and works only on the last letter of the string , if the last 
+    letter is in lower case we get a True or else a False , its not evaluating the entire
+    string
     """
     for c in s:
         flag = c.islower()
@@ -43,6 +48,9 @@ def any_lowercase3(s):
 
 def any_lowercase4(s):
     """Explain what is wrong, if anything, here.
+    The function is wrong as its using an 'or' operator. If we have a letter that is in 
+    lower case at the end but have upper cases in the beginning it would still return the 
+    value as True.
     """
     flag = False
     for c in s:
@@ -52,6 +60,7 @@ def any_lowercase4(s):
 
 def any_lowercase5(s):
     """Explain what is wrong, if anything, here.
+    Works fine
     """
     for c in s:
         if not c.islower():
@@ -66,8 +75,9 @@ def main():
     # call that function with a string for which the function returns
     # incorrectly.
     # ex.: any_lowercase_("thisstringmessesupthefunction")
-    print("Hello World!")
-
+	print("Hello World!")
+	s = input("Enter the string ")
+	print(any_lowercase5(s))
 
 if __name__ == '__main__':
     main()
