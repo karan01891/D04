@@ -21,14 +21,21 @@
 
 # Body
 
+def count(word,letter):
 
+	count = 0
+	for x in word:
+		if x == letter:
+			count += 1
+	print(count)
 ###############################################################################
 def main():
 
     # Remove print("Hello World!") and add several functions calls to count()
     # below, passing various strings and letters
-    print("Hello World!")
-
-
+	print("Hello World!")
+	word = input("Enter the word ")
+	letter = input ("Enter the letter ")
+	count(word,letter)
 if __name__ == '__main__':
     main()
