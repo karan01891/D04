@@ -15,10 +15,12 @@
 
 def any_lowercase1(s):
     """Explain what is wrong, if anything, here.
-    Nothing wrong
+    It is only checking the first value of the string , the return is causing it to leave 
+    the function
     """
     for c in s:
         if c.islower():
+            
             return( True)
         else:
             return( False)
@@ -48,9 +50,7 @@ def any_lowercase3(s):
 
 def any_lowercase4(s):
     """Explain what is wrong, if anything, here.
-    The function is wrong as its using an 'or' operator. If we have a letter that is in 
-    lower case at the end but have upper cases in the beginning it would still return the 
-    value as True.
+    works fine
     """
     flag = False
     for c in s:
@@ -60,7 +60,7 @@ def any_lowercase4(s):
 
 def any_lowercase5(s):
     """Explain what is wrong, if anything, here.
-    Works fine
+    Fails for any case which has even one upper case letter
     """
     for c in s:
         if not c.islower():
